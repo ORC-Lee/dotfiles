@@ -1,0 +1,8 @@
+logs/*
+
+clash/Country.mmdb
+clash/cache.db
+
+debugger/
+
+lazygit/state.yml
