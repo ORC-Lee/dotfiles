@@ -19,6 +19,7 @@
     ~/.zshrc:
     ~/.shell_local_before:
     ~/.config/ranger: ranger
+    ~/.config/gitui/key_bindings.ron: gitui/key_bindings.ron
 
 - shell:
   - git submodule sync --recursive
