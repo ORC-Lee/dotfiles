@@ -159,7 +159,7 @@ chrome() {
 
 alias opencwd='explorer.exe .'
 alias img='Honeyview.exe'
-alias typora='Typora.exe'
 alias lg='lazygit'
 alias fd='fdfind'
 alias bat='batcat'
+alias gu='gitui' 
