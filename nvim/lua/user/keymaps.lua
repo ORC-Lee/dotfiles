@@ -164,6 +164,6 @@ vim.cmd(
 
 -- gtags
 -- find functions calling this function
-keymap("n", "<leader>U", ":lua require('user.utils').GtagsRefernce()<cr>", opts)
+keymap("n", "<leader>U", ":lua require('user.utils').GtagsReference()<cr>", opts)
 -- find definition
 keymap("n", "<leader>T", ":lua require('user.utils').GtagsText()<cr>", opts)
