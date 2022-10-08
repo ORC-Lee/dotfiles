@@ -21,5 +21,5 @@ if not status_ok then
 end
 
 mason_lspconfig.setup({
-    ensure_installed = { "clangd", "jsonls", "marksman", "taplo", "sumneko_lua", "rust_analyzer", "bashls" }
+    ensure_installed = { "clangd", "jsonls", "marksman", "taplo", "sumneko_lua", "rust_analyzer", "bashls", "yamlls" }
 })

@@ -18,3 +18,4 @@ lspconfig.rust_analyzer.setup {}
 lspconfig.sumneko_lua.setup {}
 lspconfig.taplo.setup {}
 lspconfig.pyright.setup {}
+lspconfig.yamlls.setup {}
