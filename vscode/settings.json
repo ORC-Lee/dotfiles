@@ -137,7 +137,7 @@
 	"vim.useCtrlKeys": true,
 	"vim.useSystemClipboard": true,
 	"vim.vimrc.enable": true,
-	"vim.vimrc.path": "d:\\Work\\Config\\.vsvimrc",
+	"vim.vimrc.path": "d:/Config/.vsvimrc",
 	"vim.handleKeys": {
 		"<C-a>": false,
 		"<C-f>": false,
