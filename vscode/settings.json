@@ -540,4 +540,6 @@
 		"default": []
 	},
 	"Lua.hint.enable": true,
+	"vscode-office.openOutline": true,
+	"hediet.vscode-drawio.resizeImages": null,
 }
