@@ -3,10 +3,7 @@
 		"editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
 	},
 	"[cpp]": {
-		"editor.defaultFormatter": "xaver.clang-format"
-	},
-	"[go]": {
-		"editor.defaultFormatter": "golang.go"
+		"editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
 	},
 	"[html]": {
 		"editor.defaultFormatter": "vscode.html-language-features"
@@ -17,11 +14,6 @@
 	"[jsonc]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
-	"[python]": {
-		"editor.defaultFormatter": "ms-python.python",
-		"editor.insertSpaces": true,
-		"editor.tabSize": 4
-	},
 	"[css]": {
 		"editor.defaultFormatter": "vscode.css-language-features"
 	},
@@ -30,50 +22,50 @@
 	},
 	"C_Cpp.autocompleteAddParentheses": true,
 	"C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google}",
-	"C_Cpp.formatting": "Default",
-	"C_Cpp.intelliSenseEngine": "Disabled",
-	"C_Cpp.intelliSenseEngineFallback": "Disabled",
+	"C_Cpp.formatting": "disabled",
 	"C_Cpp.vcFormat.indent.braces": true,
 	"C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
-	"clang-format.executable": "",
+	"C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+	"C_Cpp.inlayHints.parameterNames.enabled": true,
+	"C_Cpp.inlayHints.referenceOperator.enabled": true,
+	"C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
+	"C_Cpp.inlayHints.parameterNames.suppressWhenArgumentContainsName": false,
+	"C_Cpp.autocomplete": "disabled",
+	"C_Cpp.codeFolding": "disabled",
+	"C_Cpp.intelliSenseEngine": "disabled",
+	"clangd.detectExtensionConflicts": false,
+	"clangd.onConfigChanged": "restart",
+	"clangd.checkUpdates": true,
 	"clangd.arguments": [
 		// "--compile-commands-dir=${workspaceFolder}/build", // compile data base path
-		"--query-driver=/usr/bin/clang-*,/usr/bin/g++-*",
+		"--all-scopes-completion",
+		// "--query-driver=/usr/bin/clang-*,/usr/bin/g++-*",
 		"--background-index", // 后台建立索引，并持久化到disk
 		"--clang-tidy", // 开启clang-tidy
-		// 指定clang-tidy的检查参数， 摘抄自cmu15445. 全部参数可参考 https://clang.llvm.org/extra/clang-tidy/checks
-		"--clang-tidy-checks=bugprone-*, clang-analyzer-*, google-*, modernize-*, performance-*, portability-*, readability-*, -bugprone-too-small-loop-variable, -clang-analyzer-cplusplus.NewDelete, -clang-analyzer-cplusplus.NewDeleteLeaks, -modernize-use-nodiscard, -modernize-avoid-c-arrays, -readability-magic-numbers, -bugprone-branch-clone, -bugprone-signed-char-misuse, -bugprone-unhandled-self-assignment, -clang-diagnostic-implicit-int-float-conversion, -modernize-use-auto, -modernize-use-trailing-return-type, -readability-convert-member-functions-to-static, -readability-make-member-function-const, -readability-qualified-auto, -readability-redundant-access-specifiers,",
 		"--completion-style=detailed",
-		"--cross-file-rename=true",
 		"--header-insertion=iwyu",
 		"--pch-storage=memory",
 		// 启用这项时，补全函数时，将会给参数提供占位符，键入后按 Tab 可以切换到下一占位符
 		"--function-arg-placeholders=false",
 		"--log=verbose",
-		"--ranking-model=decision_forest",
 		// 输入建议中，已包含头文件的项与还未包含头文件的项会以圆点加以区分
 		"--header-insertion-decorators",
 		"-j=12",
-		"--pretty"
+		"--pretty",
+		"--inlay-hints=true"
 		// 建议排序模型
 	],
-	"cmake.build.workspaceTargets": [],
-	"cmake.buildDirectory": "${workspaceFolder}/cmake-build",
-	"cmake.configureOnOpen": true,
-	"cmake.copyCompileCommands": "${workspaceFolder}/build/compile_commands.json",
-	"cmake.cpptools.intelliSenseMode": "gcc-x64",
-	"cmake.default.buildDirectory": "${workspaceFolder}/cmake-build",
-	"debug.console.fontSize": 16,
+	"debug.console.fontSize": 12,
 	"diffEditor.maxComputationTime": 0,
 	"diffEditor.wordWrap": "off",
 	"diffEditor.ignoreTrimWhitespace": false,
-	"doxdocgen.generic.authorEmail": "zhang.xingrui@foxmail.com",
-	"doxdocgen.generic.authorName": "raven",
+	"doxdocgen.generic.authorEmail": "orclee@outlook.com",
+	"doxdocgen.generic.authorName": "orclee",
+	"editor.smoothScrolling": false,
 	"editor.cursorSurroundingLines": 8,
 	"editor.cursorBlinking": "solid",
 	"editor.cursorStyle": "line",
-	"editor.fontFamily": "JetBrains Mono",
-	"editor.fontSize": 16,
+	"editor.fontSize": 17,
 	"editor.formatOnSaveMode": "modifications",
 	"editor.inlineSuggest.enabled": true,
 	"editor.insertSpaces": false,
@@ -86,102 +78,66 @@
 	"editor.suggestSelection": "first",
 	"editor.tabCompletion": "on",
 	"editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-	"errorLens.enabled": false,
-	"errorLens.enabledDiagnosticLevels": [
-		"error"
-	],
+	"editor.wordWrap": "on",
+	"editor.stickyScroll.enabled": true,
+	"editor.inlayHints.enabled": "on",
+	"editor.inlayHints.padding": false,
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
-	"fileheader.Author": "zhang.xingrui",
-	"fileheader.LastModifiedBy": "zhang.xingrui",
 	"files.autoGuessEncoding": true,
-	"files.autoSave": "onFocusChange",
+	"files.autoSave": "afterDelay",
 	"files.eol": "\n",
 	"files.exclude": {
 		"**/.classpath": true,
 		"**/.factorypath": true,
 		"**/.project": true,
-		"**/.settings": true
+		"**/.settings": true,
+		"**/*INFO*": true
 	},
-	"git.autofetch": true,
-	"git.suggestSmartCommit": false,
-	"github.copilot.enable": {
-		"*": true,
-		"c": true,
-		"cpp": true,
-		"go": true,
-		"markdown": false,
-		"plaintext": false,
-		"yaml": false
-	},
-	"go.autocompleteUnimportedPackages": true,
-	"go.buildOnSave": "off",
-	"go.coverageOptions": "showCoveredCodeOnly",
-	"go.toolsManagement.autoUpdate": true,
-	"http.proxySupport": "off",
 	"prettier.tabWidth": 4,
-	"python.languageServer": "Default",
-	"python.terminal.activateEnvironment": false,
 	"remote.SSH.configFile": "~/.ssh/config",
-	"remote.SSH.remotePlatform": {
-		"192.168.3.26": "linux",
-		"192.168.209.128": "linux",
-		"cxy": "linux",
-		"ubuntu18": "linux"
-	},
 	"remote.SSH.showLoginTerminal": true,
 	"remote.SSH.useLocalServer": false,
+	"remote.SSH.defaultExtensions": [
+		"byted-ide.gallery"
+	],
+	"remote.SSH.remotePlatform": {
+		"234": "linux",
+		"devbox": "linux",
+		"wuli": "linux",
+		"mysql-node": "linux",
+		"pressure-test": "linux",
+		"mysql-node-165": "linux",
+		"mysql-node-164": "linux",
+		"storage-21": "linux",
+		"mysql-node-203": "linux",
+		"wuli133": "linux",
+		"wuli26": "linux",
+		"storage-96": "linux",
+		"storage-143": "linux",
+		"wuli100": "linux",
+		"wuli38": "linux",
+		"wuli24": "linux",
+		"wuli53": "linux"
+	},
+	"terminal.integrated.cwd": "",
+	"terminal.integrated.defaultProfile.linux": "zsh",
+	"terminal.integrated.fontSize": 12,
 	"scss.lint.duplicateProperties": "warning",
 	"security.workspace.trust.untrustedFiles": "open",
 	"settingsSync.ignoredSettings": [
 		"editor.fontFamily"
 	],
-	"svg.preview.mode": "svg",
-	"terminal.external.linuxExec": "/usr/bin/alacritty",
-	"terminal.external.osxExec": "iTerm.app",
-	"terminal.integrated.cwd": "",
-	"terminal.integrated.defaultProfile.linux": "zsh",
-	"terminal.integrated.fontSize": 18,
-	"testExplorer.hideEmptyLog": false,
-	"testMate.cpp.debug.configTemplate": {
-		"args": "${argsArray}",
-		"cwd": "${cwd}",
-		"darwin": {
-			"MIMode": "lldb",
-			"type": "cppdbg"
-		},
-		"env": "${envObj}",
-		"environment": "${envObjArray}",
-		"linux": {
-			"MIMode": "gdb",
-			"type": "cppdbg"
-		},
-		"program": "${exec}",
-		"setupCommands": [
-			{
-				"description": "Enable pretty-printing for gdb",
-				"ignoreFailures": true,
-				"text": "-enable-pretty-printing"
-			}
-		],
-		"sourceFileMap": "${sourceFileMapObj}",
-		"type": "cppvsdbg",
-		"win32": {
-			"type": "cppvsdbg"
-		}
-	},
-	"testMate.cpp.log.logpanel": true,
-	"testMate.cpp.log.logSentry": "enable",
 	/* vim settings start */
 	"vim.camelCaseMotion.enable": true,
 	"vim.easymotion": true,
 	"vim.foldfix": true, // to avoid fold open up autocamatically
 	"vim.sneak": false,
 	"vim.surround": true,
-	"vim.useCtrlKeys": false,
+	"vim.useCtrlKeys": true,
 	"vim.useSystemClipboard": true,
 	"vim.vimrc.enable": true,
-	"vim.vimrc.path": "$HOME/.vsvimrc",
+	"vim.vimrc.path": "d:\\Work\\Config\\.vsvimrc",
 	"vim.handleKeys": {
 		"<C-a>": false,
 		"<C-f>": false,
@@ -190,7 +146,9 @@
 		"<C-r>": true,
 		"<C-s>": false,
 		"<C-v>": true,
-		"<C-w>": true
+		"<C-w>": true,
+		"<C-u>": false,
+		"<C-d>": false,
 	},
 	"vim.hlsearch": true,
 	"vim.incsearch": true,
@@ -203,17 +161,27 @@
 			"commands": [
 				"whichkey.show"
 			]
+		}
+	],
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"E",
+			],
+			"after": [
+				"g",
+				"T",
+			]
 		},
 		{
 			"before": [
-				"K"
+				"R",
 			],
-			"commands": [
-				"extension.dash.specific"
+			"after": [
+				"g",
+				"t"
 			]
 		},
-	],
-	"vim.normalModeKeyBindingsNonRecursive": [
 		{
 			"before": [
 				"<leader>",
@@ -232,7 +200,6 @@
 			"commands": [
 				"workbench.action.closeEditorsInGroup"
 			]
-
 		},
 		{
 			"before": [
@@ -306,6 +273,7 @@
 			]
 		},
 		// -- problem nav
+		// fix <C-d> and <C-u>
 		{
 			"before": [
 				"<leader>",
@@ -389,6 +357,30 @@
 				"editor.action.rename",
 			]
 		},
+		// search
+		{
+			"before": [
+				"<leader>",
+				"f",
+				"w"
+			],
+			"commands": [
+				"extension.searchUnderCursor",
+			]
+		},
+		// gg and G jump mark
+		{
+			"before": [
+				"g",
+				"g",
+			],
+			"after": [
+				"m",
+				"a",
+				"g",
+				"g",
+			]
+		},
 	],
 	"vim.visualModeKeyBindings": [
 		{ // which key
@@ -465,27 +457,14 @@
 		{
 			"key": "o",
 			"name": "Outline",
-			"type": "conditional",
-			"bindings": [
-				{
-					"key": "",
-					"name": "default",
-					"type": "command",
-					"command": "extension.multiCommand.execute",
-					"args": {
-						"sequence": [
-							"outline.focus",
-							"outline.focus",
-						]
-					},
-				},
-				{
-					"key": "when:outlinerExplorerView.active && view.outline.visible",
-					"name": "Hide outline",
-					"type": "command",
-					"command": "workbench.action.toggleAuxiliaryBar"
-				}
-			],
+			"type": "command",
+			"command": "workbench.action.toggleAuxiliaryBar"
+		},
+		{
+			"key": "h",
+			"name": "bookmark",
+			"type": "command",
+			"command": "lineHighlightBookmark.toogleBookmarks"
 		},
 		{
 			"key": "g",
@@ -524,16 +503,41 @@
 			"type": "command"
 		},
 	],
-	"window.zoomLevel": -1,
-	"workbench.colorTheme": "Visual Studio Light - C++",
+	"terminal.integrated.defaultProfile.osx": "zsh",
+	"terminal.external.linuxExec": "zsh",
+	"terminal.integrated.scrollback": 100000,
+	"workbench.colorTheme": "Hard Hacker",
 	"workbench.iconTheme": "vscode-icons",
-	"workbench.list.automaticKeyboardNavigation": false,
 	"workbench.panel.defaultLocation": "bottom",
 	"workbench.startupEditor": "newUntitledFile",
-	"go.enableCodeLens": {},
-	"hexeditor.columnWidth": 16,
-	"hexeditor.showDecodedText": true,
-	"hexeditor.defaultEndianness": "little",
-	"hexeditor.inspectorType": "aside",
-	"editor.wordWrap": "on"
+	"gitlens.views.commitDetails.files.layout": "tree",
+	"git.confirmSync": false, // 同步 Git 存储库前确认
+	"git.autofetch": true, // 自动从当前 Git 存储库的默认远程库提取提交
+	"git.suggestSmartCommit": false,
+	"audioCues.noInlayHints": "off",
+	"vsicons.presets.jsOfficial": true,
+	"extensions.supportUntrustedWorkspaces": {
+		"byted-ide.dev-environment-manager": {
+			"supported": true
+		}
+	},
+	"markdown.editor.drop.enabled": false,
+	// codelldb
+	"lldb.commandCompletions": true, // LLDB 指令自动补全
+	"lldb.dereferencePointers": true, // LLDB 指针显示解引用内容
+	"lldb.evaluateForHovers": true, // LLDB 鼠标悬停在变量上时预览变量值
+	"lldb.launch.expressions": "native", // LLDB 监视表达式的默认类型
+	"lldb.showDisassembly": "never", // LLDB 不显示汇编代码
+	"lldb.verboseLogging": true, // LLDB 生成更详细的日志
+	// xmake
+	"xmake.runMode": "buildRun", // 运行前自动 build
+	"xmake.debugConfigType": "codelldb", // 使用 codelldb 插件而非 cpptools 进行调试
+	"xmake.buildLevel": "verbose", // 设置编译时输出信息级别,默认是warnings级别,仅输出编译警告信息以及正常信息,verbose级别输出完整的编译命令行参数,debug级别对应 xmake -vD 的诊断信息，会打印出错的栈信息
+	"xmake.customDebugConfig": {
+		"console": "integratedTerminal" // XMake调试时使用集成终端而非 debug console,也可以使用 externalTerminal
+	},
+	"xmake.debuggingTargetsArguments": {
+		"default": []
+	},
+	"Lua.hint.enable": true,
 }
