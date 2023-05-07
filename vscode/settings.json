@@ -52,7 +52,7 @@
 		"--header-insertion-decorators",
 		"-j=12",
 		"--pretty",
-		"--inlay-hints=true"
+		"--inlay-hints=true" // 在 wsl 下要去掉，否则 clangd 客户端会启动失败
 		// 建议排序模型
 	],
 	"debug.console.fontSize": 12,
