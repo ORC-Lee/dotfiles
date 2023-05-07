@@ -94,7 +94,6 @@
 		"**/.settings": true,
 		"**/*INFO*": true
 	},
-	"prettier.tabWidth": 4,
 	"remote.SSH.configFile": "~/.ssh/config",
 	"remote.SSH.showLoginTerminal": true,
 	"remote.SSH.useLocalServer": false,
