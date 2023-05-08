@@ -20,6 +20,9 @@
 	"[javascript]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features"
 	},
+	"[markdown]": {
+		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+	},
 	"C_Cpp.autocompleteAddParentheses": true,
 	"C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google}",
 	"C_Cpp.formatting": "disabled",
