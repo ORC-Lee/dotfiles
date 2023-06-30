@@ -23,6 +23,12 @@
 	"[markdown]": {
 		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
 	},
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.python",
+		"editor.insertSpaces": true,
+		"editor.tabSize": 4,
+		"editor.formatOnType": true
+	},
 	"C_Cpp.autocompleteAddParentheses": true,
 	"C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google}",
 	"C_Cpp.formatting": "disabled",
