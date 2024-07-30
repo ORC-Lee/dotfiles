@@ -161,7 +161,7 @@
 	},
 	"vim.hlsearch": true,
 	"vim.incsearch": true,
-	"vim.leader": ";",
+	"vim.leader": "<space>",
 	"vim.normalModeKeyBindings": [
 		{ // which key
 			"before": [
