@@ -24,10 +24,11 @@
 		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
 	},
 	"[python]": {
-		"editor.defaultFormatter": "ms-python.black-formatter",
+		"editor.defaultFormatter": "charliermarsh.ruff",
 		"editor.insertSpaces": true,
 		"editor.tabSize": 4,
-		"editor.formatOnType": true
+		"editor.formatOnType": true,
+		"editor.formatOnSave": true,
 	},
 	"C_Cpp.autocompleteAddParentheses": true,
 	"C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google}",
@@ -550,4 +551,8 @@
 	"Lua.hint.enable": true,
 	"vscode-office.openOutline": true,
 	"hediet.vscode-drawio.resizeImages": null,
+	"tabnine.experimentalAutoImports": true,
+	"redhat.telemetry.enabled": true,
+	"vscode-office.editorTheme": "Dracula",
+	"ruff.lineLength": 88,
 }
