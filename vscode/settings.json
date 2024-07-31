@@ -3,7 +3,8 @@
 		"editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
 	},
 	"[cpp]": {
-		"editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+		"editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+		"editor.tabSize": 2,
 	},
 	"[html]": {
 		"editor.defaultFormatter": "vscode.html-language-features"
@@ -47,23 +48,18 @@
 	"clangd.onConfigChanged": "restart",
 	"clangd.checkUpdates": true,
 	"clangd.arguments": [
-		// "--compile-commands-dir=${workspaceFolder}/build", // compile data base path
 		"--all-scopes-completion",
-		// "--query-driver=/usr/bin/clang-*,/usr/bin/g++-*",
-		"--background-index", // 后台建立索引，并持久化到disk
-		"--clang-tidy", // 开启clang-tidy
+		"--background-index",
+		"--clang-tidy",
 		"--completion-style=detailed",
 		"--header-insertion=iwyu",
 		"--pch-storage=memory",
-		// 启用这项时，补全函数时，将会给参数提供占位符，键入后按 Tab 可以切换到下一占位符
 		"--function-arg-placeholders=false",
 		"--log=verbose",
-		// 输入建议中，已包含头文件的项与还未包含头文件的项会以圆点加以区分
 		"--header-insertion-decorators",
 		"-j=12",
 		"--pretty",
-		"--inlay-hints=true" // 在 wsl 下要去掉，否则 clangd 客户端会启动失败
-		// 建议排序模型
+		"--inlay-hints=true"
 	],
 	"debug.console.fontSize": 12,
 	"diffEditor.maxComputationTime": 0,
@@ -135,7 +131,8 @@
 	"scss.lint.duplicateProperties": "warning",
 	"security.workspace.trust.untrustedFiles": "open",
 	"settingsSync.ignoredSettings": [
-		"editor.fontFamily"
+		"editor.fontFamily",
+		"editor.fontSize"
 	],
 	/* vim settings start */
 	"vim.camelCaseMotion.enable": true,
@@ -145,8 +142,6 @@
 	"vim.surround": true,
 	"vim.useCtrlKeys": true,
 	"vim.useSystemClipboard": true,
-	"vim.vimrc.enable": true,
-	"vim.vimrc.path": "d:/Config/.vsvimrc",
 	"vim.handleKeys": {
 		"<C-a>": false,
 		"<C-f>": false,
@@ -162,6 +157,17 @@
 	"vim.hlsearch": true,
 	"vim.incsearch": true,
 	"vim.leader": "<space>",
+	"vim.insertModeKeyBindings": [
+		{
+			"before": [
+				"j",
+				"j"
+			],
+			"after": [
+				"<Esc>"
+			]
+		}
+	],
 	"vim.normalModeKeyBindings": [
 		{ // which key
 			"before": [
@@ -173,6 +179,71 @@
 		}
 	],
 	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"<leader>",
+				"l"
+			],
+			"commands": [
+				":nohl"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"q"
+			],
+			"after": [
+				":",
+				"q",
+				"<CR>"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"w"
+			],
+			"after": [
+				":",
+				"w",
+				"<CR>"
+			]
+		},
+		{
+			"before": [
+				"H",
+			],
+			"after": [
+				"^"
+			]
+		},
+		{
+			"before": [
+				"L",
+			],
+			"after": [
+				"$"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"t",
+			],
+			"after": [
+				"<C-]>"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"T",
+			],
+			"after": [
+				"<C-t>"
+			]
+		},
 		{
 			"before": [
 				"E",
@@ -440,6 +511,10 @@
 			]
 		},
 	],
+	// To improve performance
+	"extensions.experimental.affinity": {
+		"vscodevim.vim": 1
+	},
 	/* vim settings end */
 	"vsicons.dontShowNewVersionMessage": true,
 	/* which key bindings */
@@ -515,15 +590,13 @@
 	"terminal.integrated.defaultProfile.osx": "zsh",
 	"terminal.external.linuxExec": "zsh",
 	"terminal.integrated.scrollback": 100000,
-	"workbench.colorTheme": "Hard Hacker",
+	"workbench.colorTheme": "Hard Hacker High Contrast",
 	"workbench.iconTheme": "vscode-icons",
 	"workbench.panel.defaultLocation": "bottom",
-	"workbench.startupEditor": "newUntitledFile",
 	"gitlens.views.commitDetails.files.layout": "tree",
 	"git.confirmSync": false, // 同步 Git 存储库前确认
 	"git.autofetch": true, // 自动从当前 Git 存储库的默认远程库提取提交
 	"git.suggestSmartCommit": false,
-	"audioCues.noInlayHints": "off",
 	"vsicons.presets.jsOfficial": true,
 	"extensions.supportUntrustedWorkspaces": {
 		"byted-ide.dev-environment-manager": {
@@ -551,8 +624,15 @@
 	"Lua.hint.enable": true,
 	"vscode-office.openOutline": true,
 	"hediet.vscode-drawio.resizeImages": null,
+	"ruff.lineLength": 88,
 	"tabnine.experimentalAutoImports": true,
 	"redhat.telemetry.enabled": true,
+	"git.openRepositoryInParentFolders": "never",
+	"accessibility.signals.noInlayHints": {
+		"sound": "off"
+	},
+	"workbench.editorAssociations": {
+		"{git,gitlens}:/**/*.{md,csv,svg}": "default"
+	},
 	"vscode-office.editorTheme": "Dracula",
-	"ruff.lineLength": 88,
 }
