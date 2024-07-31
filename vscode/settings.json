@@ -48,18 +48,23 @@
 	"clangd.onConfigChanged": "restart",
 	"clangd.checkUpdates": true,
 	"clangd.arguments": [
+		// "--compile-commands-dir=${workspaceFolder}/build", // compile data base path
 		"--all-scopes-completion",
-		"--background-index",
-		"--clang-tidy",
+		// "--query-driver=/usr/bin/clang-*,/usr/bin/g++-*",
+		"--background-index", // 后台建立索引，并持久化到disk
+		"--clang-tidy", // 开启clang-tidy
 		"--completion-style=detailed",
 		"--header-insertion=iwyu",
 		"--pch-storage=memory",
+		// 启用这项时，补全函数时，将会给参数提供占位符，键入后按 Tab 可以切换到下一占位符
 		"--function-arg-placeholders=false",
 		"--log=verbose",
+		// 输入建议中，已包含头文件的项与还未包含头文件的项会以圆点加以区分
 		"--header-insertion-decorators",
 		"-j=12",
 		"--pretty",
-		"--inlay-hints=true"
+		"--inlay-hints=true" // 在 wsl 下要去掉，否则 clangd 客户端会启动失败
+		// 建议排序模型
 	],
 	"debug.console.fontSize": 12,
 	"diffEditor.maxComputationTime": 0,
