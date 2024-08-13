@@ -644,5 +644,5 @@
 	"qtForPython.designer.path": "D:\\Install\\Python\\Python311\\Scripts\\pyside6-designer.exe",
 	"qtForPython.rcc.path": "D:\\Install\\Python\\Python311\\Scripts\\pyside6-rcc.exe",
 	"qtForPython.uic.path": "D:\\Install\\Python\\Python311\\Scripts\\pyside6-uic.exe",
-	"python.defaultInterpreterPath": "C:\\Users\\ORCLe\\anaconda3\\envs\\OpenCV-ML\\python.exe",
+	"python.languageServer": "Jedi",
 }
