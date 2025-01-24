@@ -82,3 +82,6 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# lazygit
+alias lg='lazygit'
