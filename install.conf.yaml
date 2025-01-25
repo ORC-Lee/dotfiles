@@ -10,17 +10,19 @@
     ~/.gitconfig:
     ~/.gitignore_global:
     ~/.shell:
-    ~/.config/tmux: tmux
-    ~/.tmux.conf: tmux/tmux.conf
+    # ~/.config/tmux: tmux
+    # ~/.tmux.conf: tmux/tmux.conf
     ~/.config/lazygit: lazygit
     ~/.config/nvim: nvim
-    ~/.vsvimrc: vscode/vsvimrc
+    #~/.vsvimrc: vscode/vsvimrc
     ~/.zsh:
     ~/.zshrc:
     ~/.shell_local_before:
-    ~/.config/ranger: ranger
-    ~/.config/gitui/key_bindings.ron: gitui/key_bindings.ron
-    ~/.config/alacritty: alacritty
+    ~/.config/yazi: yazi 
+    ~/.config/wezterm: wezterm 
+    # ~/.config/ranger: ranger
+    # ~/.config/gitui/key_bindings.ron: gitui/key_bindings.ron
+    # ~/.config/alacritty: alacritty
 
 - shell:
   - git submodule sync --recursive
