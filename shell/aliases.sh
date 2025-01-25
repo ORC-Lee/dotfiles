@@ -4,6 +4,7 @@ then alias ls='ls --color=auto -F'
 else
     alias ls='ls -FG'
 fi
+
 alias grep='grep --color'
 
 # ls aliases
@@ -14,6 +15,7 @@ alias l='ls'
 # Aliases to protect against overwriting
 alias cp='cp -i'
 alias mv='mv -i'
+alias rm='rm -i'
 
 # git related aliases
 alias gag='git exec ag'
