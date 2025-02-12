@@ -6,7 +6,7 @@ local opt = vim.opt
 opt.wrap = true -- 自动折行
 opt.spell = false -- 禁用拼写检查
 opt.relativenumber = false -- 禁用相对行号
-opt.guifont = { "JetBrains Mono", "FiraCode Nerd Font", "等距更纱黑体 Slab SC" }
+opt.guifont = { "Ubuntu Mono", "JetBrains Mono", "FiraCode Nerd Font", "等距更纱黑体 Slab SC" }
 opt.list = true --显示空白字符
 opt.listchars = { space = "·" }
 opt.shell = "pwsh" -- 设置shell为pwsh7
@@ -17,5 +17,5 @@ opt.conceallevel = 0 -- 隐藏级别
 
 -- markdown-preview option
 vim.cmd([[
-let g:mkdp_browser = 'msedge'
+let g:mkdp_browser = 'chrome'
 ]])

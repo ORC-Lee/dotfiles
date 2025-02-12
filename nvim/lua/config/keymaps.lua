@@ -2,11 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-local unmap = vim.api.nvim_del_keymap
-
--- 去掉 <leader>w 的映射
-unmap("n", "<leader>w")
-
 local map = vim.keymap.set
 
 -- Insert mode
