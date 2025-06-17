@@ -1,22 +1,24 @@
-return {
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        pyright = {
-          -- Disable pyright
-          enabled = false,
-          -- Prevent pyright install from mason
-          mason = false,
-          -- handlers = {
-          --   -- Disable pyright diagnostics
-          --   ["textDocument/publishDiagnostics"] = function() end,
-          -- },
-        },
-      },
-    },
-  },
-}
+return {}
+
+-- return {
+--   {
+--     "neovim/nvim-lspconfig",
+--     opts = {
+--       servers = {
+--         pyright = {
+--           -- Disable pyright
+--           enabled = false,
+--           -- Prevent pyright install from mason
+--           mason = false,
+--           -- handlers = {
+--           --   -- Disable pyright diagnostics
+--           --   ["textDocument/publishDiagnostics"] = function() end,
+--           -- },
+--         },
+--       },
+--     },
+--   },
+-- }
 
 -- return {
 --   {
