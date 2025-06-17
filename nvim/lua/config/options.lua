@@ -9,7 +9,11 @@ opt.relativenumber = false -- 禁用相对行号
 opt.guifont = { "Ubuntu Mono", "JetBrains Mono", "FiraCode Nerd Font", "等距更纱黑体 Slab SC" }
 opt.list = true --显示空白字符
 opt.listchars = { space = "·" }
-opt.shell = "pwsh" -- 设置shell为pwsh7
+if vim.fn.has("win32") == 1 then
+	opt.shell = "pwsh" -- 设置shell为pwsh7
+else
+	opt.shell = "zsh" -- 设置shell为zsh
+end
 opt.shellcmdflag = "-command"
 opt.shellquote = '"'
 opt.shellxquote = ""
