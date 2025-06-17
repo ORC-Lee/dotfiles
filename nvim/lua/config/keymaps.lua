@@ -10,7 +10,7 @@ map("i", "jj", "<esc>", { desc = "Quick Exit Insert Mode", remap = true, silent 
 
 -- Normal mode
 -- 保存当前buffer
-map("n", "<leader>w", "<cmd>w<cr>", { desc = "Save", remap = true, silent = true })
+map("n", "<leader>qw", "<cmd>w<cr>", { desc = "Save", remap = true, silent = true })
 
 -- 移动到行首
 map("n", "H", "^", { desc = "Move To Beginning Of Line", remap = true, silent = true })
@@ -18,11 +18,11 @@ map("n", "H", "^", { desc = "Move To Beginning Of Line", remap = true, silent = 
 -- 移动到行尾
 map("n", "L", "$", { desc = "Move To End Of Line", remap = true, silent = true })
 
--- 快速跳转
-map("n", "<leader>t", "<c-]>", { desc = "Quick Jump", remap = true, silent = true })
-
--- 快速跳转返回
-map("n", "<leader>T", "<c-t>", { desc = "Quick Jump Back", remap = true, silent = true })
+-- -- 快速跳转
+-- map("n", "<leader>t", "<c-]>", { desc = "Quick Jump", remap = true, silent = true })
+--
+-- -- 快速跳转返回
+-- map("n", "<leader>T", "<c-t>", { desc = "Quick Jump Back", remap = true, silent = true })
 
 -- 切换到下一个buffer
 map("n", "<leader>bn", "<cmd>bn<cr>", { desc = "Switch To Next Buffer", remap = true, silent = true })
