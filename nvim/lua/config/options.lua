@@ -21,5 +21,5 @@ opt.conceallevel = 0 -- 隐藏级别
 
 -- markdown-preview option
 vim.cmd([[
-let g:mkdp_browser = 'chrome'
+let g:mkdp_browser = 'google-chrome'
 ]])
