@@ -32,7 +32,10 @@ map("n", "<leader>bN", "<cmd>bN<cr>", { desc = "Switch To Previous Buffer", rema
 
 -- Command mode
 -- 正向回溯历史命令
-map("c", "<c-p>", "<up>", { desc = "Forward traversal history command", remap = true, silent = false })
+map("c", "<c-p>", "<up>", { desc = "Forward Traversal History Command", remap = true, silent = false })
 
 -- 反向回溯历史命令
-map("c", "<c-n>", "<down>", { desc = "Reverse traversal history command", remap = true, silent = false })
+map("c", "<c-n>", "<down>", { desc = "Reverse Traversal History Command", remap = true, silent = false })
+
+-- 选择Python环境
+map("n", "<leader>ce", "<cmd>PyenvSelect<CR>", { desc = "Select Python Environment", noremap = true, silent = true })
