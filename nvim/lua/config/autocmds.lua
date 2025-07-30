@@ -29,27 +29,27 @@ vim.api.nvim_create_autocmd("VimEnter", {
 	once = true,
 })
 
--- 设置透明
-vim.api.nvim_create_autocmd("ColorScheme", {
-	pattern = "*",
-	callback = function()
-		local hl_groups = {
-			"Normal",
-			"SignColumn",
-			"NormalNC",
-			"TelescopeNormal",
-			"NvimTreeNormal",
-			"EndOfBuffer",
-			"MsgArea",
-			"NormalFloat",
-		}
-
-		-- 设置透明背景
-		for _, name in ipairs(hl_groups) do
-			vim.api.nvim_set_hl(0, name, { bg = "none" })
-		end
-
-		-- 设置光标行（当前行）透明
-		vim.api.nvim_set_hl(0, "CursorLine", { bg = "#36383F", fg = "NONE" })
-	end,
-})
+-- -- 设置透明
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+-- 	pattern = "*",
+-- 	callback = function()
+-- 		local hl_groups = {
+-- 			"Normal",
+-- 			"SignColumn",
+-- 			"NormalNC",
+-- 			"TelescopeNormal",
+-- 			"NvimTreeNormal",
+-- 			"EndOfBuffer",
+-- 			"MsgArea",
+-- 			"NormalFloat",
+-- 		}
+--
+-- 		-- 设置透明背景
+-- 		for _, name in ipairs(hl_groups) do
+-- 			vim.api.nvim_set_hl(0, name, { bg = "none" })
+-- 		end
+--
+-- 		-- 设置光标行（当前行）透明
+-- 		vim.api.nvim_set_hl(0, "CursorLine", { bg = "#36383F", fg = "NONE" })
+-- 	end,
+-- })
