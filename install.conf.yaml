@@ -20,6 +20,7 @@
     ~/.shell_local_before:
     ~/.config/yazi: yazi 
     ~/.config/wezterm: wezterm 
+    ~/.conkyrc: conky/conkyrc
     # ~/.config/ranger: ranger
     # ~/.config/gitui/key_bindings.ron: gitui/key_bindings.ron
     # ~/.config/alacritty: alacritty

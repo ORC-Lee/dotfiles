@@ -1,0 +1,19 @@
+conky.config = {
+    background = false,
+    update_interval = 1,
+    double_buffer = true,
+    own_window = true,
+    own_window_type = 'dock',
+    own_window_transparent = true,
+    own_window_argb_visual = true,
+    alignment = 'bottom_left',
+    gap_y = 0,
+    draw_shades = false,
+    use_xft = true,
+    font = 'JetBrains Mono:bold:size=8',
+    default_color='#FE53BB'
+};
+
+conky.text = [[
+${time %H:%M}
+]];
