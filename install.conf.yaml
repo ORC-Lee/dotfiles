@@ -12,7 +12,7 @@
     ~/.shell:
     # ~/.config/tmux: tmux
     # ~/.tmux.conf: tmux/tmux.conf
-    ~/.config/lazygit: lazygit
+    # ~/.config/lazygit: lazygit
     ~/.config/nvim: nvim
     #~/.vsvimrc: vscode/vsvimrc
     ~/.zsh:
@@ -21,7 +21,7 @@
     ~/.config/yazi: yazi 
     ~/.config/wezterm: wezterm 
     ~/.conkyrc: conky/conkyrc
-    ~/.config/hypr: hypr
+    # ~/.config/hypr: hypr
     /etc/keyd/default.conf: keyd/default.conf
     # ~/.config/ranger: ranger
     # ~/.config/gitui/key_bindings.ron: gitui/key_bindings.ron
