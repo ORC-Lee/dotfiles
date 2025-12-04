@@ -11,9 +11,24 @@ export PYTHONSTARTUP=$HOME/.pythonrc
 VAGRANT_DISABLE_VBOXSYMLINKCREATE=1
 
 # clash 配置
-hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
-alias setp='export https_proxy="http://${hostip}:7890"; export http_proxy="http://${hostip}:7890"; export all_proxy="socks5://${hostip}:7890"; export ALL_PROXY="socks5://${hostip}:7890";'
-alias unsetp='unset https_proxy; unset http_proxy; unset all_proxy; unset ALL_PROXY;'
+# hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
+# alias setp='export https_proxy="http://${hostip}:7890"; export http_proxy="http://${hostip}:7890"; export all_proxy="socks5://${hostip}:7890"; export ALL_PROXY="socks5://${hostip}:7890";'
+# alias unsetp='unset https_proxy; unset http_proxy; unset all_proxy; unset ALL_PROXY;'
+
+# clash 配置
+# 定义代理地址变量
+httpproxy=http://127.0.0.1:7897
+socksproxy=socks5://127.0.0.1:7897
+
+# 设置使用代理
+alias setp="export http_proxy=$httpproxy; export https_proxy=$httpproxy; export all_proxy=$socksproxy; echo 'Set proxy successfully'"
+
+# 设置取消使用代理
+alias unsetp="unset http_proxy; unset https_proxy; unset all_proxy; echo 'Unset proxy successfully'"
+
+# 查ip
+alias ipcn="curl myip.ipip.net"
+alias ip="curl ip.sb"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
