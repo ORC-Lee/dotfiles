@@ -1,0 +1,86 @@
+" 设置前导键
+:let mapleader=" "
+
+" 显示行号
+:set nonumber
+
+" 高亮搜索的关键字
+:set hlsearch
+
+" 搜索忽略大小写
+:set incsearch
+
+" 有一个或以上大写字母时仍大小写敏感
+:set smartcase
+
+" 退出插入模式
+:inoremap jj <ESC>
+
+" 取消搜索高亮快捷键
+:nnoremap <Leader>ur :<C-u>nohlsearch<CR><C-l><ESC>
+
+" 定义快捷键到行首和行尾
+:map H ^
+:map L $
+
+" 快速跳转到定义/声明
+:noremap gd :vsc VAssistX.GotoImplementation<CR><ESC>
+:noremap gD <C-]>
+
+" 创建定义
+:noremap cd :vsc Edit.CreateDeclarationDefinition<CR>
+
+" 移动定义
+:noremap md :vsc Edit.MoveDefinitionLocation<CR>
+
+" 退出保存
+:nmap <Leader>qq :q<CR>
+:nmap <Leader>qw :w<CR>
+:nmap <Leader>qW :wa<CR>
+
+" 跳转
+:nnoremap <C-o> :vsc View.NavigateBackward<CR>
+:nnoremap <C-i> :vsc View.NavigateForward<CR>
+
+" 编译和调试
+:nnoremap <Leader>dC :vsc Build.Compile<CR>
+:nnoremap <Leader>dB :vsc Build.BuildSolution<CR>
+:nnoremap <Leader>dt :vsc Debug.StopDebugging<CR>
+:nnoremap <Leader>da :vsc Debug.Start<CR>
+; :nnoremap <Leader>dO :vsc Debug.StepOver<CR>
+; :nnoremap <Leader>do :vsc Debug.StepOut<CR>
+; :nnoremap <Leader>di :vsc Debug.StepInto<CR>
+:nnoremap <F10> :vsc Debug.StepOver<CR>
+:nnoremap <F11> :vsc Debug.StepInto<CR>
+:nnoremap <S-F11> :vsc Debug.StepOut<CR>
+:nnoremap <Leader>db :vsc Debug.ToggleBreakPoint<CR>
+
+" 标签页导航
+:nnoremap <Leader>bn :vsc Window.PreviousDocumentWindow<CR>
+:nnoremap <Leader>bN :vsc Window.NextDocumentWindow<CR>
+:nnoremap <Leader>bd :vsc Window.CloseDocumentWindow<CR>
+:nnoremap <Leader>bD :vsc Window.CloseAllDocuments<CR>
+:nnoremap <Leader>bs :vsc Window.ShowEzMDIFileList<CR>
+:nnoremap <Leader>bp :vsc Window.PinTab<CR>
+:nnoremap <Leader>bP :vsc Window.CloseAllButPinned<CR>
+
+" 打开解决方案资源管理器
+:nnoremap <Leader>vs :vsc View.SolutionExplorer<CR>
+:nnoremap <Leader>ve :vsc View.ErrorList<CR>
+:nnoremap <Leader>vo :vsc View.Output<CR>
+
+" 注释/取消注释
+:nnoremap cc :vsc Edit.CommentSelection<CR>
+:nnoremap cu :vsc Edit.UnCommentSelection<CR>
+:vnoremap cc :vsc Edit.CommentSelection<CR>
+:vnoremap cu :vsc Edit.UnCommentSelection<CR>
+
+" 格式化代码
+:nnoremap cf :vsc Edit.FormatDocument<CR>
+:vnoremap cf :vsc Edit.FormatSelection<CR>
+
+" 在插入模式下使用Ctrl键导航
+:inoremap <C-h> <Left>
+:inoremap <C-j> <Down>
+:inoremap <C-k> <Up>
+:inoremap <C-l> <Right>
