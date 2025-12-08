@@ -1,0 +1,30 @@
+{
+	"name": "Vimium C",
+	"@time": "2025/12/8 10:57:05",
+	"time": 1765162625884,
+	"environment": {
+		"extension": "2.12.2",
+		"platform": "win",
+		"chromium": 143
+	},
+	"keyLayout": 2,
+	"keyMappings": [
+		"#!no-check",
+		"unmap t\t\t\t\t# 取消t（打开新页面）映射",
+		"map J scrollPageDown \t\t# 向下滚动半个页面的高度",
+		"map K scrollPageUp\t\t# 向上滚动半个页面的高度",
+		"map <a-[> previousTab    \t# 上一个标签页",
+		"map <a-]> nextTab       \t# 下一个标签页      ",
+		"map <a-t> createTab \t\t# 新建标签页",
+		"map <a-w> removeTab    \t        # 关闭当前标签页  ",
+		"map H firstTab  \t\t# 切换到第一个页面   ",
+		"map L lastTab  \t\t\t# 切换最后一个页面                  ",
+		"map gb goBack   \t\t# 在历史记录中后退     ",
+		"map gf goForward    \t\t# 在历史记录中前进          ",
+		"map q focusInput  \t\t# 切换选择光标",
+		""
+	],
+	"newTabUrl": "www.google.com",
+	"searchUrl": "https://www.google.com/search?q=$s \\",
+	"vimSync": true
+}
