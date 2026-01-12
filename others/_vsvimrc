@@ -68,6 +68,7 @@
 :nnoremap <Leader>vs :vsc View.SolutionExplorer<CR>
 :nnoremap <Leader>ve :vsc View.ErrorList<CR>
 :nnoremap <Leader>vo :vsc View.Output<CR>
+:nnoremap <Leader>vf :vsc View.FindResults1<CR>
 
 " 注释/取消注释
 :nnoremap cc :vsc Edit.CommentSelection<CR>
@@ -84,3 +85,4 @@
 :inoremap <C-j> <Down>
 :inoremap <C-k> <Up>
 :inoremap <C-l> <Right>
+
