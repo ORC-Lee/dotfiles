@@ -9,6 +9,7 @@ return {
     require('pyenv_manager').setup({
       -- Paths for conda environments
       conda_paths = {
+        vim.fn.expand("/opt/miniconda3"),
         vim.fn.expand("/opt/miniconda3/envs"),
         vim.fn.expand("~/.conda/envs/"),
       },
