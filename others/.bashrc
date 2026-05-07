@@ -64,3 +64,4 @@ function y() {
 # fzf 设置
 export FZF_DEFAULT_OPTS='--preview "bat --style=numbers --color=always --line-range :500 {}" --layout=reverse --bind "ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down,ctrl-j:preview-down,ctrl-k:preview-up,ctrl-/:toggle-preview"'
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
