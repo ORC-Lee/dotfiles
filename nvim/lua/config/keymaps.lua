@@ -14,9 +14,11 @@ map("n", "<leader>qw", "<cmd>w<cr>", { desc = "Save", remap = true, silent = tru
 
 -- 移动到行首
 map("n", "H", "^", { desc = "Move To Beginning Of Line", remap = true, silent = true })
+map("v", "H", "^", { desc = "Move To Beginning Of Line", remap = true, silent = true })
 
 -- 移动到行尾
 map("n", "L", "$", { desc = "Move To End Of Line", remap = true, silent = true })
+map("v", "L", "$", { desc = "Move To End Of Line", remap = true, silent = true })
 
 -- -- 快速跳转
 -- map("n", "<leader>t", "<c-]>", { desc = "Quick Jump", remap = true, silent = true })
