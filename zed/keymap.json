@@ -93,6 +93,12 @@
     },
   },
   {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "L": "editor::SelectToEndOfLine",
+    },
+  },
+  {
     "context": "ProjectPanel && not_editing",
     "bindings": {
       "j": "menu::SelectNext",
