@@ -149,4 +149,10 @@
       "space f t": "workspace::ToggleBottomDock",
     },
   },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "L": "editor::SelectToEndOfLine",
+    },
+  },
 ]
