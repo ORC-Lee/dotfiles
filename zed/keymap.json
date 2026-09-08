@@ -23,6 +23,7 @@
       "space t l": "workspace::ToggleLeftDock",
       "space t s": "multi_workspace::ToggleWorkspaceSidebar",
       "space t z": "workspace::ToggleEditorZoom",
+      "space q q": "zed::Quit",
       "ctrl-right": "vim::ResizePaneRight",
       "ctrl-left": "vim::ResizePaneLeft",
       "ctrl-down": "vim::ResizePaneDown",
@@ -156,3 +157,4 @@
     },
   },
 ]
+
